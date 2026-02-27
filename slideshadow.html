@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img { width:500px; height:300px; }
+</style>
+<script>
+var images = [
+"https://images.unsplash.com/photo-1482192596544-9eb780fc7f66",
+"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+"https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+];
+var i = 0;
+
+function slideShow() {
+    document.getElementById("slide").src = images[i];
+    i = (i + 1) % images.length;
+    setTimeout(slideShow, 2000);
+}
+</script>
+</head>
+
+<body onload="slideShow()" style="text-align:center;">
+<h2>🎞 Mountain Slideshow</h2>
+<img id="slide">
+</body>
+</html>
